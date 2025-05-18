@@ -1,4 +1,6 @@
 FROM node
+# 安装pnpm
+RUN npm install -g pnpm
 LABEL name='my-nest-app'
 LABEL version='1.0.0'
 COPY . /app
