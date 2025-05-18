@@ -1,7 +1,7 @@
 FROM node
 
 # 安装pnpm
-FROM pnpm
+FROM pnpm/pnpm:8.15.9 as builder
 
 LABEL name='my-nest-app'
 LABEL version='1.0.0'
