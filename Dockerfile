@@ -3,7 +3,7 @@ FROM node
 # 安装pnpm
 RUN npm install -g pnpm@8.15.9
 
-LABEL name='my-nest-app'
+LABEL name='my-nest-project'
 LABEL version='1.0.0'
 COPY . /app
 WORKDIR /app
