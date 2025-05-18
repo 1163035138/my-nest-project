@@ -9,7 +9,7 @@ export class UserService {
   }
 
   findAll() {
-    return `This action returns all user`;
+    return `刘洋我爱你!啦啦啦`;
   }
 
   findOne(id: number) {
