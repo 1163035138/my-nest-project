@@ -1,11 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-
+import { User } from './schema/user';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 @Injectable()
 export class UserService {
+  constructor(
+    @InjectModel(User.name) private userModel: Model<User>,
+  ) {}
   create(createUserDto: CreateUserDto) {
-    return '刘洋我爱你!啦啦啦!';
+    const user = new this.userModel(createUserDto);
+    return user.save();
   }
 
   findAll() {
