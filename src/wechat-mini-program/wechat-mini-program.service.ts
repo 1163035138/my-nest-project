@@ -22,7 +22,7 @@ export class WechatMiniProgramService {
   }
   //获取小程序萌盒主页瀑布流数据
   async getHomeWaterfallData(body: any) {
-    // 解构请求参数并设置默认值
+    // 解构请求参数并设置默认值!
     const {
       page = 1,
       pageSize = 10,
