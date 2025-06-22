@@ -9,7 +9,7 @@ export class WechatMiniProgramController {
   getHomeTabsData() {
     return this.wechatMiniProgramService.getHomeTabsData();
   }
-  //获取小程序萌盒主页瀑布流数据
+  //获取小程序萌盒主页瀑布流数据!
   @Post('getHomeWaterfallData')
   getHomeWaterfallData(@Body() body: any) {
     return this.wechatMiniProgramService.getHomeWaterfallData(body);
